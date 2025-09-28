@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.padre{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10px;
+    background-color: antiquewhite;
+    padding: 2opx;
+    border: 2px solid brown;
+}
+
+.hijo1{
+    background-color: aqua;
+    padding: 20px;
+    border: 2px solid rosybrown;
+}
+
+.hijo2{
+    background-color: lightcoral;
+    padding: 20px;
+    border: 2px solid rgb(221, 153, 153);
+}
+
+.hijo3{
+    background-color: brown;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.hijo4{
+    background-color: blueviolet;
+    padding: 2opx;
+    border: 2px solid black;
+}
