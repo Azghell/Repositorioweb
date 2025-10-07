@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en JavaScript</title>
+    <link rel="stylesheet" href="clase_maquetado.css"> <!-- Vinculación del CSS externo-->
+</head>
+<body>
+
+    <h1>Tabla Comparativa de Eventos en JavaScript</h1>
+    
+    <table>
+        <tr>
+            <th>Evento</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+        </tr>
+        <tr>
+            <td>click</td>
+            <td>Se inicia cuando el usuario hace click sobre el elemento.</td>
+            <td>
+                <code>
+                    document.getElemtById("button").addEventListener("click", fuction()  alert("Has hecho click"));
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td>mouseover</td>
+            <td>Se inicia cuando el puntero se mueve sobre un elemento.</td>
+            <td>
+                <code>
+                document.getElemtById("div").addEventListener("mouseover", fuction()  this.style.background = "pink;");
+                </code>
+            </td>
+            </tr>
+            <tr>
+                <td>submit</td>
+                <td>Se inicia cuando se envía un formulario. </td>
+                <td>
+                   <code>
+                    document.getElementById("formulario").addEventListener("submit", fuction(a) alert("Formulario enviado"));
+                </code>
+                </td>
+            </tr>
+            <tr>
+                <td>change</td>
+                <td>Se inicia cuando el valor de un campo input o select cambia.</td>
+                <td>
+                    <code>
+                        document.getElementById("select").addEventListener("change", fuction()  alert("Opción sleccionada: " + this.value) );
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>keydown</td>
+                <td>Se inicia cuando se presiona una tecla.</td>
+                <td>
+                    <code>
+                        document.addEventListener("keydown", fuction(event)  console.log("tecla presionada: " + event.key));
+                    </code>
+                </td>
+            </tr>
+    </table>
+</body>
+</html>
