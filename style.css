@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4;
+    background-color: rgb(108, 173, 77);
+    color: #1b5b72;
+    min-height: 100vh;
+}
+
+h2{
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 50px 1fr;
+    min-height: 80vh; 
+}
+
+/* Sidebar */
+.sidebar{
+    grid-area: sidebar;
+    background-color: #376a9e;
+    color: #c76cb2;
+    padding: 12px; 
+    display: flex;
+    flex-direction: column ;
+}
+
+h1{
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Header */
+.header{
+    grid-area: header;
+    background-color: rgb(123, 140, 140);
+    display: flex;
+    padding: 20px;
+    box-shadow:  0 2px 4px rgb(106, 156, 187);
+}
+
+/* Main */
+.main{
+    grid-area: main;
+    padding: var(--spacing);
+    overflow-y:auto;
+}   
+
+/* Cards */
+.cards{
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr);
+    gap: var(--spacing);
+}
+
+.card{
+    background-color: rgb(141, 172, 194);
+    padding: var(--spacing);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgb(167, 81, 162);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
