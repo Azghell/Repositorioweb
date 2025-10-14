@@ -1,42 +1,117 @@
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base del cuerpo */
 body{
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(202, 84, 151);
-    color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8; /* Color de fondo muy claro */
+    color: #1b5b72; /* Color de texto principal */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Asegura que el footer se quede abajo */
 }
 
-h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #7d135f;
-    color: aquamarine;
+/* Encabezados */
+h1, h2 {
+    color: #0b2d3e; /* Tono de azul oscuro para encabezados */
 }
 
-ul {
-  list-style: none;        
-  padding: 0;
-  margin: 0;
-  display: flex;            
-  gap: 20px;                
-  justify-content: center; 
+h2{
+    margin-bottom: 16px;
+    font-size: 1.2em;
 }
 
-li {
-  position: relative;     
+/* Estilo del Header/Encabezado */
+.header{
+    background-color: #0b2d3e; /* Azul oscuro */
+    color: white;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-li a {
-  text-decoration: none;    
-  color: #337aa7;             
-  font-weight: bold;
-  padding: 10px 15px;
-  display: block;
-  border-radius: 5px;
-  transition: background 0.3s ease, color 0.3s ease;
-  background-color: #64b96b; 
+/* Contenedor principal (Container) - Usa CSS Grid */
+.container{
+    flex-grow: 1; /* Permite que el contenedor tome el espacio restante */
+    display: grid;
+    /* Define 2 columnas: 220px para la barra lateral y el resto para el contenido principal */
+    grid-template-columns: 220px 1fr; 
+    /* Define 1 fila para el contenido */
+    grid-template-rows: 1fr;
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto; /* Centra el contenedor principal */
+    border-radius: 8px;
+    overflow: hidden; /* Oculta desbordamiento si el contenido es demasiado largo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-
-li a:hover {
-  background-color: #7d135f;
-  color: #c78482;
+/* Sidebar (Navegación) */
+.sidebar{
+    background-color: #376a9e; /* Azul medio */
+    color: #e0f7fa; /* Texto claro */
+    padding: 16px; 
+    display: flex;
+    flex-direction: column;
 }
 
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar a {
+    color: #e0f7fa;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #2b547d; /* Tono más oscuro al pasar el ratón */
+}
+
+/* Main Content */
+.main{
+    background-color: white;
+    padding: 16px;
+    overflow-y: auto;
+}   
+
+/* Estilos de las tarjetas dentro del Main */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive cards */
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.card{
+    background-color: #e3f2fd; /* Azul muy claro */
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    text-align: center;
+    border-left: 5px solid #376a9e;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #ccc;
+    color: #444;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
