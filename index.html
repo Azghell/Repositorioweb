@@ -3,28 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Web</title>
+    <title>Proyecto Web - Ejercicios</title>
+    //Primero enlasamos su hoja de estilos 
+    <link rel="stylesheet" href="estyle.css">
 </head>
 <body>
-    <h1>
-     Ejercicios de Diseño Web
-    </h1>
-    <ul>
-        <li>
-        <a href="tarea1sjs.html">Declaración de Variables</a>
-        </li>
-        <li>
-        <a href="operacionesjs.html">Operaciones Aritméticas en JavaScript</a>
-        </li>
-        <li>
-        <a href="fundamentosjs.html">Prueba</a>
-        </li>
-        <li>
-        <a href="indexjs.html">Página Simple de JavaScript</a>
-        </li>
-        <li>
-        <a href="dashboard.html">maquetadoweb</a>
-        </li>
-    </ul>
+    //Colocamos un encabezado
+    <header class="header">
+        <h1>Diseño Web y JavaScript</h1>
+    </header>
+
+    //Agregamos una clase para usarla en los estilos
+    <div class="container">
+        //Agregamos contenedores hijos y ademas una clase.
+        <nav class="sidebar">
+            <h2>Ejercicios de Diseño Web</h2>
+            <ul>
+                <li>
+                    <a href="tarea1sjs.html">Declaración de Variables</a>
+                </li>
+                <li>
+                    <a href="operacionesjs.html">Operaciones Aritméticas</a>
+                </li>
+                <li>
+                    <a href="fundamentosjs.html">Fundamentos JavaScript</a>
+                </li>
+                <li>
+                    <a href="indexjs.html">Página Simple de JavaScript</a>
+                </li>
+                <li>
+                    <a href="dashboard.html">Maquetado Web</a>
+                </li>
+            </ul>
+        </nav>
+
+        //Contenido principal con una clase. (vacío por ahora, pero sigue la estructura Grid) 
+        <main class="main">
+            <p>Selecciona un ejercicio del menú lateral para continuar.</p>
+            <div class="cards">
+                <div class="card">Módulo 1</div>
+                <div class="card">Módulo 2</div>
+                <div class="card">Módulo 3</div>
+            </div>
+        </main>
+    </div>
+
+    //y un pie de pagina.
+    <footer class="footer">
+        <p>&copy; 2025 Proyecto Web. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
